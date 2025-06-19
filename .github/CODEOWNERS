@@ -17,7 +17,7 @@ QA/ @sistema-bibliotecario-ITLA/QA
 #rama que recibe la regla / la organizacion / el departamento que puede aprovar a esa rama
 # Reglas específicas
 Front/ @sistema-bibliotecario-ITLA/Lead-Front
-Backend/ @sistema-bibliotecario-ITLA/Lead-Backend
+BackEnd/ @sistema-bibliotecario-ITLA/Lead-Back
 DBA/ @sistema-bibliotecario-ITLA/DBA
 QA/ @sistema-bibliotecario-ITLA/QA
 >>>>>>> ee62cf8 (agregando el codeowners para control de revisiones)
