@@ -1,0 +1,12 @@
+esta es una guia para el front, en produccion este archivo no existe
+React se dividen en componentes, puedes hacerlos enteros, o por partes
+por si necesitas reutilizarlos, tu solo te encargas de que las UI se vean bien
+no tendran restricciones las rutas, ahora eso lo juntamos en la rama Dev
+tus push no pueden ser directos a la rama, debes crear una rama con el siguiente formato
+front/feature/{lo que estas haciendo} ejemplo completo
+front/feature/loginBug
+para saber de que rama viene el cambio, en tu caso leslie es la encargada de aprobarte para subir a front
+bien?
+
+todo lo que se encuentra en components, son componentes que puedes reutilizar, aclarando eso, mirate los
+ejemplos, te dejare unos comentarios en los codigos
