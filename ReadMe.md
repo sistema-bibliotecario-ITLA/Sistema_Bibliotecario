@@ -19,3 +19,5 @@ Brindar una solución integral que automatice las operaciones de una red de bibl
 ## 🛠️ Tecnologías utilizadas
 
 - **Frontend**: React.js
+- **Backend**: C# ASP.NET
+- **DataBase**: SQL SERVER

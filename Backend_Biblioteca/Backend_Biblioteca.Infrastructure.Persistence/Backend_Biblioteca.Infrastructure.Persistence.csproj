@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Backend_Biblioteca.Core.Application\Backend_Biblioteca.Core.Application.csproj" />
+      <ProjectReference Include="..\Backend_Biblioteca.Core.Domain\Backend_Biblioteca.Core.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Contexts\" />
+      <Folder Include="Migrations\" />
+      <Folder Include="Repositories\" />
+    </ItemGroup>
+
+</Project>
