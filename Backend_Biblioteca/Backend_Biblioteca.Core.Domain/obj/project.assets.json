@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj",
+      "projectUniqueName": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj",
       "projectName": "Backend_Biblioteca.Core.Domain",
-      "projectPath": "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj",
+      "projectPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj",
       "packagesPath": "/home/darlyndev/.nuget/packages/",
-      "outputPath": "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/",
+      "outputPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/darlyndev/.nuget/NuGet/NuGet.Config"

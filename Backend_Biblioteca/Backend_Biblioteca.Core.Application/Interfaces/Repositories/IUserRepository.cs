@@ -3,7 +3,7 @@ using Backend_Biblioteca.Core.Domain.Entities;
 
 namespace Backend_Biblioteca.Core.Application.Interfaces.Repositories;
 
-public interface IUSerRepository : IGenericRepository<User>
+public interface IUserRepository : IGenericRepository<User>
 {
     Task<User> GetByEmail(string email);
 }

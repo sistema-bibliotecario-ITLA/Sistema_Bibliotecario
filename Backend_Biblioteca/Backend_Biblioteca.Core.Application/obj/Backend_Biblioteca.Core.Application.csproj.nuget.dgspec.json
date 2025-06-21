@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj": {}
+    "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj": {}
   },
   "projects": {
-    "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj": {
+    "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj",
+        "projectUniqueName": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj",
         "projectName": "Backend_Biblioteca.Core.Application",
-        "projectPath": "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj",
+        "projectPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj",
         "packagesPath": "/home/darlyndev/.nuget/packages/",
-        "outputPath": "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Application/obj/",
+        "outputPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/darlyndev/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj": {
-                "projectPath": "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj"
+              "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj": {
+                "projectPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj"
               }
             }
           }
@@ -47,6 +47,20 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -73,14 +87,14 @@
         }
       }
     },
-    "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj": {
+    "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj",
+        "projectUniqueName": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj",
         "projectName": "Backend_Biblioteca.Core.Domain",
-        "projectPath": "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj",
+        "projectPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj",
         "packagesPath": "/home/darlyndev/.nuget/packages/",
-        "outputPath": "/home/darlyndev/RiderProjects/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/",
+        "outputPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/darlyndev/.nuget/NuGet/NuGet.Config"

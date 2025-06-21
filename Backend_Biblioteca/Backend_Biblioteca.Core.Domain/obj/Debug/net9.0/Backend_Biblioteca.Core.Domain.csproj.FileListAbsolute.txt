@@ -1,0 +1,12 @@
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/bin/Debug/net9.0/Backend_Biblioteca.Core.Domain.deps.json
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/bin/Debug/net9.0/Backend_Biblioteca.Core.Domain.dll
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/bin/Debug/net9.0/Backend_Biblioteca.Core.Domain.pdb
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/Debug/net9.0/Backend_Biblioteca.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/Debug/net9.0/Backend_Biblioteca.Core.Domain.AssemblyInfoInputs.cache
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/Debug/net9.0/Backend_Biblioteca.Core.Domain.AssemblyInfo.cs
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/Debug/net9.0/Backend_Biblioteca.Core.Domain.csproj.CoreCompileInputs.cache
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/Debug/net9.0/Backend_Biblioteca.Core.Domain.sourcelink.json
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/Debug/net9.0/Backend_Biblioteca.Core.Domain.dll
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/Debug/net9.0/refint/Backend_Biblioteca.Core.Domain.dll
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/Debug/net9.0/Backend_Biblioteca.Core.Domain.pdb
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/obj/Debug/net9.0/ref/Backend_Biblioteca.Core.Domain.dll
