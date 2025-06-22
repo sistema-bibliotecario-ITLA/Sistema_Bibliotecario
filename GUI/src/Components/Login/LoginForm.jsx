@@ -1,13 +1,29 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
+import {login} from "../../API/auth";
+import {Navigate, useNavigate} from "react-router-dom";
+
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // hook de navegacion, para redirigir a paginas
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Login:", { email, password });
+
+    try {
+      const data = await login({email, password});
+      console.log("login exitoso", data);
+
+      //localStorage.setItem("token", data.token);
+      //localStorage.setItem("userData", data.userVm);
+      navigate("/");
+
+    } catch(err){
+      alert(err.message);
+    }
   };
 
   return (

@@ -1,27 +1,38 @@
 import React, { useState } from "react";
+import {useNavigate} from "react-router-dom"
+import {signUp} from "../../API/auth";
 
 const Register = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
+  const [namee, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirm] = useState("");
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (form.password !== form.confirmPassword) {
-      alert("Las contraseñas no coinciden.");
+    if(password !== confirmPassword){
+      alert("las contrase?as no coinciden")
       return;
     }
 
-    console.log("Registro:", form);
-    // Aquí puedes enviar los datos al backend
+    const body = {
+      name: namee,
+      email: email,
+      password: password,
+      role: "Client"
+    };
+
+    try {
+      const data = await signUp({body})
+      console.log("Se guardo el nuevo usuario");
+      alert("su Cuenta ha sido creada");
+
+      navigate("/login");
+    } catch(err){
+      console.log("error: ", err);
+      alert(err);
+    }
   };
 
   return (
@@ -49,8 +60,8 @@ const Register = () => {
             className="form-control"
             id="floatingName"
             placeholder="Nombre completo"
-            value={form.name}
-            onChange={handleChange}
+            value={namee}
+            onChange={(e) => setName(e.target.value)}
             required
           />
           <label htmlFor="floatingName">Nombre completo</label>
@@ -64,8 +75,8 @@ const Register = () => {
             className="form-control"
             id="floatingEmail"
             placeholder="nombre@ejemplo.com"
-            value={form.email}
-            onChange={handleChange}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <label htmlFor="floatingEmail">Correo electrónico</label>
@@ -79,8 +90,8 @@ const Register = () => {
             className="form-control"
             id="floatingPassword"
             placeholder="Contraseña"
-            value={form.password}
-            onChange={handleChange}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
           <label htmlFor="floatingPassword">Contraseña</label>
@@ -94,8 +105,8 @@ const Register = () => {
             className="form-control"
             id="floatingConfirmPassword"
             placeholder="Confirmar contraseña"
-            value={form.confirmPassword}
-            onChange={handleChange}
+            value={confirmPassword}
+            onChange={(e) => setConfirm(e.target.value)}
             required
           />
           <label htmlFor="floatingConfirmPassword">Confirmar contraseña</label>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .github/CODEOWNERS @Darlyn30
 
 # Acceso global (tú)
@@ -10,14 +9,3 @@ Front/ @sistema-bibliotecario-ITLA/Lead-Front
 Backend/ @sistema-bibliotecario-ITLA/Lead-Backend
 DBA/ @sistema-bibliotecario-ITLA/DBA
 QA/ @sistema-bibliotecario-ITLA/QA
-=======
-# Acceso global (tú)
-* @Darlyn30 @sistema-bibliotecario-ITLA/LiderDesarrollo
-
-#rama que recibe la regla / la organizacion / el departamento que puede aprovar a esa rama
-# Reglas específicas
-Front/ @sistema-bibliotecario-ITLA/Lead-Front
-BackEnd/ @sistema-bibliotecario-ITLA/Lead-Back
-DBA/ @sistema-bibliotecario-ITLA/DBA
-QA/ @sistema-bibliotecario-ITLA/QA
->>>>>>> ee62cf8 (agregando el codeowners para control de revisiones)
