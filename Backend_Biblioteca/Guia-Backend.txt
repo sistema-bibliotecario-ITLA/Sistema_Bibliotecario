@@ -1,0 +1,13 @@
+esta es la guia para los devs backend
+esto es sencillo, una api de c# ASP.NET, PERO, esta bajo la famosa "Clean Architecture" o arquitectura limpia
+la capa de DOMAIN solo es para entidades, para modelos
+la capa application va la logica de negocio, la aplicacion no debe exponer datos directamente
+solo lo necesario, ejemplo para que entiendas, el caso del usuario, tiene contrase?a
+mas bien un hash, eso no se puede exponer, para eso dividimos el negocio de los datos
+la capa persistence, esta si maneja los datos
+otra cosa, no puedes hacer push directamente a la rama de Backend
+debes crear una rama con este formato
+Backend/feature/{lo que propones} ejemplo completo
+Backend/feature/userServiceBugFixed
+ya luego el encargado de ese departamento que es darlyn, tu compa?ero de backend
+que es lider de ese departamento, debera aprovarte
