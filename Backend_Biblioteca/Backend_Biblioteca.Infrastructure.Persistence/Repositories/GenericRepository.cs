@@ -6,43 +6,47 @@ namespace Backend_Biblioteca.Infrastructure.Persistence.Repositories;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : class
 {
-    private readonly ApplicationDbContext _context;
-    private readonly DbSet<T> _dbSet;
-    public GenericRepository(ApplicationDbContext context)
+    protected readonly DbContext _context;
+    protected readonly DbSet<T> _dbSet;
+
+    public GenericRepository(DbContext context)
     {
         _context = context;
         _dbSet = context.Set<T>();
     }
-    public async Task<IEnumerable<T>> GetAll()
+
+    public virtual async Task<IEnumerable<T>> GetAllAsync()
     {
-        var entities = await _dbSet.ToListAsync();
-        return entities;
+        return await _dbSet.ToListAsync();
     }
 
-    public async Task<T> GetByIdAsync(int id)
+    public virtual async Task<T?> GetByIdAsync(int id)
     {
         var entity = await _dbSet.FindAsync(id);
+        if (entity == null)
+            throw new IndexOutOfRangeException("Entity not found");
+        
         return entity;
     }
 
-    public async Task CreateAsync(T entity)
+    public virtual async Task AddAsync(T entity)
     {
         await _dbSet.AddAsync(entity);
         await _context.SaveChangesAsync();
     }
 
-    public async Task UpdateAsync(T entity)
+    public virtual async Task Update(T entity)
     {
         _dbSet.Update(entity);
         await _context.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int id)
+    public virtual async Task Delete(int id)
     {
         var entity = await GetByIdAsync(id);
-
-        if (entity == null)
-            throw new IndexOutOfRangeException("Entity not found");
+        
+        if(entity == null)
+            throw new Exception("Entity not found");
         
         _dbSet.Remove(entity);
         await _context.SaveChangesAsync();

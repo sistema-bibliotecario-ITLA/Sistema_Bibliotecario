@@ -8,4 +8,5 @@ public class LoginResult
     public string Message { get; set; }
     public bool IsSuccess { get; set; }
     public UserViewModel UserVm { get; set; }
+    
 }

@@ -13,9 +13,11 @@ public static class ServiceIntegration
     {
         #region services
         //aqui se inyectan los servicios, y no directamente en el program
+        services.AddScoped<LoginService>();
         services.AddTransient<IPasswordHasher, PasswordHasher>();
         services.AddTransient<IUserService, UserService>();
-        services.AddScoped<LoginService>();
+        services.AddTransient<IAutorService, AutorService>();
+        services.AddTransient<IBookService, BookService>();
 
         #endregion
     }

@@ -1,3 +1,5 @@
+using Backend_Biblioteca.Core.Domain.Entities;
+
 namespace Backend_Biblioteca.Core.Application.ViewModels.User;
 
 public class UserViewModel

@@ -21,17 +21,21 @@ public class LoginService
         _configuration = configuration;
         _authService = authService;
     }
+    
+    //esto no hay necesidad de explicarlo, este es el servicio que hace el login
 
     public async Task<LoginResult> LoginAsync(LoginViewModel entity)
     {
         var user = await _userRepository.GetByEmail(entity.Email);
         
+        //si el usuario no existe, saltara aqui
         if(user == null)
             return new LoginResult() { IsSuccess = false, Message = "User not found" };
-        
+        //si la password esta equivocada
         if(!_passwordHasher.VerifyHashedPassword(entity.Password, user.PasswordHash))
             return new LoginResult() { IsSuccess = false, Message = "Invalid password" };
 
+        //si to_do esta ok, ps genera un token de autorizacion y retorna un objeto de loginResult(DTO>LoginResult)  
         var token = await _authService.GenerateTokenAsync(user);
         return new LoginResult
         {

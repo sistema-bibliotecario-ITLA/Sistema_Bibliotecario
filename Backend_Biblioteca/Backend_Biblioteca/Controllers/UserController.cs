@@ -19,7 +19,7 @@ public class UserController : ControllerBase
 
     public async Task<IActionResult> GetUsers()
     {
-        var users = await _service.GetAllUsers();
+        var users = await _service.GetAllAsync();
         
         if(users == null)
             return NotFound(new {Message = "there are no users"});
@@ -30,7 +30,7 @@ public class UserController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetUser(int id)
     {
-        var user = await _service.GetUser(id);
+        var user = await _service.GetByIdAsync(id);
 
         if (user == null)
             return NotFound("User not found");
@@ -38,17 +38,24 @@ public class UserController : ControllerBase
         return Ok(user);
     }
 
+    [HttpGet("{email}")]
+    public async Task<IActionResult> GetUserByEmail(string email)
+    {
+        var user = await _service.GetByEmailAsync(email);
+        return Ok(user);
+    }
+
     [HttpPost]
     public async Task<IActionResult> CreateUser([FromBody] SaveUserViewModel userVm)
     {
-        await _service.AddUser(userVm);
-        return Ok();
+        await _service.AddAsync(userVm);
+        return Ok(new {Mesage = "User created"});
     }
 
     [HttpPut]
     public async Task<IActionResult> UpdateUser([FromBody] UserViewModel userVm)
     {
-        await _service.UpdateUser(userVm);
+        await _service.UpdateAsync(userVm);
         return Ok();
     }
 
@@ -56,7 +63,7 @@ public class UserController : ControllerBase
 
     public async Task<IActionResult> DeleteUser(int id)
     {
-        await _service.DeleteUser(id);
+        await _service.DeleteAsync(id);
         return Ok();
     }
 }

@@ -52,6 +52,12 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+app.UseCors(polucy =>
+{
+    polucy.AllowAnyHeader();
+    polucy.AllowAnyMethod();
+    polucy.AllowAnyOrigin();
+});
 app.UseHttpsRedirection();
 
 app.MapControllers();

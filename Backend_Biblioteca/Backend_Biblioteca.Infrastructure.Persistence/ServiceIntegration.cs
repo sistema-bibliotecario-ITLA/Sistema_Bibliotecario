@@ -1,3 +1,4 @@
+using Backend_Biblioteca.Core.Application.Interfaces;
 using Backend_Biblioteca.Core.Application.Interfaces.Repositories;
 using Backend_Biblioteca.Infrastructure.Persistence.Contexts;
 using Backend_Biblioteca.Infrastructure.Persistence.Repositories;
@@ -33,6 +34,9 @@ public static class ServiceIntegration
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddTransient<IUserRepository, UserRepository>();
+        services.AddTransient<IAutorRepository, AutorRepository>();
+        services.AddTransient<IGenreRepository, GenreRepository>();
+        services.AddTransient<IBookRepository, BookRepository>();
 
         #endregion
     }
