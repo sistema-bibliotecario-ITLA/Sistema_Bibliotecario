@@ -2893,11 +2893,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca/Backend_Biblioteca.csproj",
+      "projectUniqueName": "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca/Backend_Biblioteca.csproj",
       "projectName": "Backend_Biblioteca",
-      "projectPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca/Backend_Biblioteca.csproj",
+      "projectPath": "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca/Backend_Biblioteca.csproj",
       "packagesPath": "/home/darlyndev/.nuget/packages/",
-      "outputPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca/obj/",
+      "outputPath": "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/darlyndev/.nuget/NuGet/NuGet.Config"
@@ -2912,14 +2912,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj": {
-              "projectPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj"
+            "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj": {
+              "projectPath": "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Application/Backend_Biblioteca.Core.Application.csproj"
             },
-            "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj": {
-              "projectPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj"
+            "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj": {
+              "projectPath": "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj"
             },
-            "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Infrastructure.Persistence/Backend_Biblioteca.Infrastructure.Persistence.csproj": {
-              "projectPath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Infrastructure.Persistence/Backend_Biblioteca.Infrastructure.Persistence.csproj"
+            "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca.Infrastructure.Persistence/Backend_Biblioteca.Infrastructure.Persistence.csproj": {
+              "projectPath": "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca.Infrastructure.Persistence/Backend_Biblioteca.Infrastructure.Persistence.csproj"
             }
           }
         }
@@ -2934,7 +2934,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -2964,12 +2964,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[9.0.4, 9.0.4]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2978,7 +2972,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/darlyndev/.dotnet/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

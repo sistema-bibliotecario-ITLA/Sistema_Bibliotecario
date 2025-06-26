@@ -1,6 +1,7 @@
 using Backend_Biblioteca.Core.Application.Interfaces.Services;
 using Backend_Biblioteca.Core.Application.ViewModels.User;
 using Backend_Biblioteca.Core.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend_Biblioteca.Controllers;
@@ -44,21 +45,22 @@ public class UserController : ControllerBase
         var user = await _service.GetByEmailAsync(email);
         return Ok(user);
     }
-
+    
     [HttpPost]
     public async Task<IActionResult> CreateUser([FromBody] SaveUserViewModel userVm)
     {
         await _service.AddAsync(userVm);
         return Ok(new {Mesage = "User created"});
     }
-
+    
+    [Authorize(Roles = "Client")]
     [HttpPut]
     public async Task<IActionResult> UpdateUser([FromBody] UserViewModel userVm)
     {
         await _service.UpdateAsync(userVm);
         return Ok();
     }
-
+    [Authorize(Roles = "Client")]
     [HttpDelete("{id}")]
 
     public async Task<IActionResult> DeleteUser(int id)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dlD+3c4tlrc=",
+  "dgSpecHash": "4Yz7jQDvfCk=",
   "success": true,
-  "projectFilePath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca/Backend_Biblioteca.csproj",
+  "projectFilePath": "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca/Backend_Biblioteca.csproj",
   "expectedPackageFiles": [
     "/home/darlyndev/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/home/darlyndev/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
@@ -63,8 +63,7 @@
     "/home/darlyndev/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
     "/home/darlyndev/.nuget/packages/system.text.json/9.0.6/system.text.json.9.0.6.nupkg.sha512",
     "/home/darlyndev/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "/home/darlyndev/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
-    "/home/darlyndev/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.4/microsoft.aspnetcore.app.ref.9.0.4.nupkg.sha512"
+    "/home/darlyndev/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

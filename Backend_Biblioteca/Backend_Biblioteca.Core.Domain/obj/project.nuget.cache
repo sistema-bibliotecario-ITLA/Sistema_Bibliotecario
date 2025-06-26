@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "suq8fOECosg=",
+  "dgSpecHash": "KQ4zUpNbypI=",
   "success": true,
-  "projectFilePath": "/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj",
-  "expectedPackageFiles": [
-    "/home/darlyndev/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.4/microsoft.aspnetcore.app.ref.9.0.4.nupkg.sha512"
-  ],
+  "projectFilePath": "/home/darlyndev/Documents/Sistema_Bibliotecario/Backend_Biblioteca/Backend_Biblioteca.Core.Domain/Backend_Biblioteca.Core.Domain.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
