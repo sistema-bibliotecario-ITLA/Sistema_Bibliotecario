@@ -9,4 +9,5 @@ public interface IAutorService
     Task Create(SaveAutorViewModel autorVm);
     Task Update(AutorViewModel autorVm);
     Task Delete(int id);
+    Task<AutorViewModel> GetAuthorByName(string name);
 }

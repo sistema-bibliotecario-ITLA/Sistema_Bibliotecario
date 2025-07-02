@@ -33,5 +33,14 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
         
         return book;
     }
-    
+
+    public async Task<Book> FindByName(string name)
+    {
+        var book = await _context.Books
+            .Include(g => g.Genre)
+            .Include(a => a.Author)
+            .FirstOrDefaultAsync(b => b.Name == name);
+        
+        return book;
+    }
 }

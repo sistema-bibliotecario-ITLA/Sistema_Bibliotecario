@@ -1,13 +1,15 @@
 using Backend_Biblioteca.Core.Application.Services;
 using Backend_Biblioteca.Core.Application.ViewModels.User;
 using Backend_Biblioteca.Core.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Backend_Biblioteca.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/login")]
+[AllowAnonymous] // cualquiera puede acceder a este endpoint ya que es para loguearse
 [ApiController]
 public class LoginController : ControllerBase
 {

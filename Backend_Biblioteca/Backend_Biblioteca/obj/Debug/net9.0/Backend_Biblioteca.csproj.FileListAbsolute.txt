@@ -99,3 +99,6 @@
 /home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca/obj/Debug/net9.0/Backend_Biblioteca.genruntimeconfig.cache
 /home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca/obj/Debug/net9.0/ref/Backend_Biblioteca.dll
 /home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/darlyndev/RiderProjects/SistemaBibliotecario/Backend_Biblioteca/Backend_Biblioteca/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll

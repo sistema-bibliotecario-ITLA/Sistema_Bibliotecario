@@ -91,4 +91,25 @@ public class BookService : IBookService
     {
         await _bookRepository.Delete(id);
     }
+
+    public async Task<BookViewModel> GetBookByName(string name)
+    {
+        var book = await _bookRepository.FindByName(name);
+        
+        if(book == null)
+            throw new NullReferenceException("Book not found");
+
+        BookViewModel bookVm = new();
+        bookVm.Id = book.Id;
+        bookVm.Name = book.Name;
+        bookVm.IsAvailable = book.IsAvailable;
+        bookVm.Quantity = book.Quantity;
+        bookVm.GenreName = book.Genre.Name;
+        bookVm.AuthorName = book.Author.Name;
+        bookVm.ImgUrl = book.ImgUrl;
+        bookVm.RentPrice = book.RentPrice;
+        bookVm.Description = book.Description;
+        
+        return bookVm;
+    }
 }

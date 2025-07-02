@@ -9,4 +9,5 @@ public interface IBookService
     Task AddNewBook(SaveBookViewModel model);
     Task UpdateBook(BookViewModel model);
     Task DeleteBook(int id);
+    Task<BookViewModel> GetBookByName(string name);
 }

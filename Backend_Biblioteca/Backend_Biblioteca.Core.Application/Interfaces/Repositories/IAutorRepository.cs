@@ -6,4 +6,5 @@ namespace Backend_Biblioteca.Core.Application.Interfaces.Repositories;
 public interface IAutorRepository : IGenericRepository<Author>
 {
     Task<Author> GetWithBooks(int id);
+    Task<Author> GetWithBooksByName(string name);
 }

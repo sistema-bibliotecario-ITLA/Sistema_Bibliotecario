@@ -18,6 +18,7 @@ public static class ServiceIntegration
         services.AddTransient<IUserService, UserService>();
         services.AddTransient<IAutorService, AutorService>();
         services.AddTransient<IBookService, BookService>();
+        services.AddTransient<IGenreService, GenreService>();
 
         #endregion
     }

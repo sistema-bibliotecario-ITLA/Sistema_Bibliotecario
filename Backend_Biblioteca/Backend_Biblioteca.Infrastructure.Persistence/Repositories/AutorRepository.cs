@@ -32,4 +32,14 @@ public class AutorRepository : GenericRepository<Author>, IAutorRepository
         
         return author;
     }
+
+    public async Task<Author> GetWithBooksByName(string name)
+    {
+        var author = await _context.Authors
+            .Include(a => a.Books)
+            .ThenInclude(b => b.Genre)
+            .FirstOrDefaultAsync(a => a.Name == name);
+        
+        return author;
+    }
 }

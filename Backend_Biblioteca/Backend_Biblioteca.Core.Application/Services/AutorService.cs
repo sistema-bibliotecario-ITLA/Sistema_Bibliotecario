@@ -81,4 +81,25 @@ public class AutorService : IAutorService
     {
         await _autorRepository.Delete(id);
     }
+
+    public async Task<AutorViewModel> GetAuthorByName(string name)
+    {
+        var author = await _autorRepository.GetWithBooksByName(name);
+
+        if (author == null)
+            throw new NullReferenceException("Author not found");
+
+        AutorViewModel authorVm = new();
+        authorVm.Id = author.Id;
+        authorVm.AutorName = author.Name;
+        authorVm.Books = author.Books.Select(b => new AuthorBook
+        {
+            Id = b.Id,
+            Name = b.Name,
+            GenreBookName = b.Genre?.Name,
+            ImgUrl = b.ImgUrl
+        }).ToList();
+        
+        return authorVm;
+    }
 }

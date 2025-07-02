@@ -23,8 +23,6 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
     public virtual async Task<T?> GetByIdAsync(int id)
     {
         var entity = await _dbSet.FindAsync(id);
-        if (entity == null)
-            throw new IndexOutOfRangeException("Entity not found");
         
         return entity;
     }
@@ -44,9 +42,6 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
     public virtual async Task Delete(int id)
     {
         var entity = await GetByIdAsync(id);
-        
-        if(entity == null)
-            throw new Exception("Entity not found");
         
         _dbSet.Remove(entity);
         await _context.SaveChangesAsync();
