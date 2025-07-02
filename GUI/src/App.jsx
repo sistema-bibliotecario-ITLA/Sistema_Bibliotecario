@@ -25,6 +25,6 @@ function App() {
     </>
   )
 }
-import CatalogoLibros from './Pages/CatalogoLibros';
+
 
 export default App
