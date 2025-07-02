@@ -5,9 +5,10 @@ namespace Backend_Biblioteca.Core.Application.Interfaces.Services;
 
 public interface IUserService
 {
-    Task<IEnumerable<UserViewModel>> GetAllUsers();
-    Task<UserViewModel> GetUser(int id);
-    Task AddUser(SaveUserViewModel userVm);
-    Task UpdateUser(UserViewModel userVm);
-    Task DeleteUser(int id);
+    Task<IEnumerable<UserViewModel>> GetAllAsync();
+    Task<UserViewModel> GetByIdAsync(int id);
+    Task<UserViewModel> GetByEmailAsync(string email);
+    Task AddAsync(SaveUserViewModel userVm);
+    Task<bool> UpdateAsync(UserViewModel userVm);
+    Task<bool> DeleteAsync(int id);
 }

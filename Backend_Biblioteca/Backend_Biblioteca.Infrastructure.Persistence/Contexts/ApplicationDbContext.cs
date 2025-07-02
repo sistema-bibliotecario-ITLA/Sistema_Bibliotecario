@@ -10,4 +10,9 @@ public class ApplicationDbContext : DbContext
     }
     
     public DbSet<User> Users { get; set; }
+    public DbSet<Book> Books { get; set; }
+    public DbSet<Author> Authors { get; set; }
+    public DbSet<Genre> Genres { get; set; }
+    public DbSet<BorrowedBook> BorrowedBooks { get; set; }
+    public DbSet<Notification> Notifications { get; set; }
 }

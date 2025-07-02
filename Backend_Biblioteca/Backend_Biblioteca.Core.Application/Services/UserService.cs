@@ -16,9 +16,10 @@ public class UserService : IUserService
         _repository = repository;
         _passwordHasher = passwordHasher;
     }
-    public async Task<IEnumerable<UserViewModel>> GetAllUsers()
+
+    public async Task<IEnumerable<UserViewModel>> GetAllAsync()
     {
-        var users = await _repository.GetAll();
+        var users = await _repository.GetAllAsync();
         //NOTA EC:
         //esto busca el servicio en el repositorio, y selecciona solo lo que va a usar con el viewmodel, manda al viewmodel lo que esta
         //en dicha tabla
@@ -33,7 +34,7 @@ public class UserService : IUserService
         return usersVm;
     }
 
-    public async Task<UserViewModel> GetUser(int id)
+    public async Task<UserViewModel> GetByIdAsync(int id)
     {
         var user = await _repository.GetByIdAsync(id);
 
@@ -48,35 +49,41 @@ public class UserService : IUserService
         return userVm;
     }
 
-    public async Task AddUser(SaveUserViewModel userVm)
+    public async Task<UserViewModel> GetByEmailAsync(string email)
     {
-        User user = new();
-        user.Email = userVm.Email;
-        user.Name = userVm.Name;
-        user.PasswordHash = _passwordHasher.HashPassword(userVm.Password);
-        user.Role = userVm.Role;
+        var user = await _repository.GetByEmail(email);
 
-        await _repository.CreateAsync(user);
-    }
-
-    public async Task UpdateUser(UserViewModel userVm)
-    {
-        User user = await _repository.GetByIdAsync(userVm.Id);
-
-        if (user == null)
-            throw new IndexOutOfRangeException("User not found");
-        
+        //esto lo mismo que arriba
+        //solo sobreescribe lo que queremos exponer de la entidad mandandole al cliente solo que tiene que ver 
+        UserViewModel userVm = new();
         userVm.Id = user.Id;
         userVm.Email = user.Email;
         userVm.Name = user.Name;
         userVm.Role = user.Role;
         
-        await _repository.UpdateAsync(user);
+        return userVm;
     }
 
-
-    public async Task DeleteUser(int id)
+    public async Task AddAsync(SaveUserViewModel userVm)
     {
-        await _repository.DeleteAsync(id);
+        User user = new()
+        {
+            Email = userVm.Email,
+            Name = userVm.Name,
+            PasswordHash = _passwordHasher.HashPassword(userVm.Password),
+            Role = userVm.Role ?? "User" // Opcional: asigna "User" si no viene un rol
+        };
+
+        await _repository.AddAsync(user);
+    }
+
+    public Task<bool> UpdateAsync(UserViewModel userVm)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<bool> DeleteAsync(int id)
+    {
+        throw new NotImplementedException();
     }
 }
