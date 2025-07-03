@@ -19,7 +19,7 @@ public class BookController : ControllerBase
     //[Authorize(Roles = "Client, Admin")]
     [HttpGet]
 
-    public async Task<ActionResult<List<BookViewModel>>> GetAllBooks()
+    public async Task<ActionResult> GetAllBooks()
     {
         var books = await _bookService.GetAllBooks();
         return Ok(books);

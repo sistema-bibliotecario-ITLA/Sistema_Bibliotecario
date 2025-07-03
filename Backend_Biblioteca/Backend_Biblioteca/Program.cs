@@ -46,6 +46,18 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
+//definimos los origenes que pueden consumir nuestra API
+var origenesPermitidos = builder.Configuration.GetValue<string>("origenesPermitidos")!.Split(','); //por si varios sitios consumiran
+// la web api
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(optionsCORS =>
+    {
+        optionsCORS.WithOrigins(origenesPermitidos);
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -55,12 +67,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(policy =>
-{
-    policy.AllowAnyHeader();
-    policy.AllowAnyMethod();
-    policy.AllowAnyOrigin();
-});
+app.UseCors();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseHttpsRedirection();
 
 app.MapControllers();

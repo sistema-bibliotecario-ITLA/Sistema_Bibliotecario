@@ -21,7 +21,7 @@ public class LoginController : ControllerBase
         _userVm = new UserViewModel();
     }
     //esto es el metodo para que el usuario se loguee y reciva su token
-    [HttpPost("login")]
+    [HttpPost]
     public async Task<IActionResult> Login([FromBody] LoginViewModel loginVm)
     {
         if (!ModelState.IsValid)

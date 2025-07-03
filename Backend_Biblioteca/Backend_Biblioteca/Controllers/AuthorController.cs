@@ -26,7 +26,7 @@ public class AuthorController : ControllerBase
     }
 
     //[Authorize(Roles = "Client, Admin")]
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
 
     public async Task<IActionResult> GetAuthorById(int id)
     {
